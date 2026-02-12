@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Watching</title>
+    <style>
+        body, html {
+            margin: 0; padding: 0;
+            width: 100%; height: 100%;
+            background-color: #000;
+            overflow: hidden;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 30px; left: 30px;
+            z-index: 10;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            font-size: 2.5rem;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .back-button:hover { opacity: 1; }
+
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="browse.html" class="back-button">
+        &#10229;
+    </a>
+
+    <video id="videoPlayer" controls autoplay>
+        <source id="videoSource" src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        // This script looks at the URL (e.g., watch.html?v=dance.mp4)
+        // and sets the video source to that file.
+        const urlParams = new URLSearchParams(window.location.search);
+        const videoFile = urlParams.get('v');
+        
+        if (videoFile) {
+            const video = document.getElementById('videoPlayer');
+            const source = document.getElementById('videoSource');
+            
+            source.src = videoFile;
+            video.load(); // Reload the player with the new file
+        }
+    </script>
+
+</body>
+</html>

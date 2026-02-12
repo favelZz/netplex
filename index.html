@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix</title>
+    <title>Netflix - Who's Watching?</title>
     <style>
         body {
-            background-color: #141414; /* Netflix Black */
+            background-color: #141414;
             color: #fff;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             display: flex;
@@ -14,99 +14,31 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow: hidden;
         }
-
-        .profile-container {
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 3.5vw;
-            font-weight: 500;
-            letter-spacing: 1px;
-            margin-bottom: 30px;
-        }
-
-        .profile-list {
-            display: flex;
-            justify-content: center;
-            gap: 2vw;
-            list-style: none;
-            padding: 0;
-        }
-
-        .profile-card {
-            text-decoration: none;
-            color: grey;
-            transition: color 0.3s ease;
-        }
-
-        .profile-card:hover {
-            color: white;
-        }
-
+        .profile-container { text-align: center; }
+        h1 { font-size: 3.5vw; font-weight: 500; margin-bottom: 30px; }
+        .profile-list { display: flex; justify-content: center; gap: 2vw; }
+        .profile-card { text-decoration: none; color: grey; transition: 0.3s; text-align: center; }
+        .profile-card:hover { color: white; }
         .profile-img {
-            width: 10vw;
-            min-width: 100px;
-            max-width: 200px;
-            aspect-ratio: 1 / 1;
-            border-radius: 4px;
-            border: 3px solid transparent;
-            background-size: cover;
-            background-position: center;
-            transition: border 0.3s ease;
+            width: 10vw; min-width: 100px; aspect-ratio: 1/1;
+            border-radius: 4px; border: 3px solid transparent;
+            background-size: cover; background-position: center;
             margin-bottom: 10px;
         }
-
-        /* Hover effect: add a white border just like Netflix */
-        .profile-card:hover .profile-img {
-            border: 3px solid white;
-        }
-
-        .profile-name {
-            font-size: 1.3vw;
-        }
-
-        .manage-button {
-            margin-top: 40px;
-            background: transparent;
-            color: grey;
-            border: 1px solid grey;
-            padding: 8px 25px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 1.1vw;
-            cursor: pointer;
-            transition: color 0.3s, border 0.3s;
-        }
-
-        .manage-button:hover {
-            color: white;
-            border: 1px solid white;
-        }
+        .profile-card:hover .profile-img { border: 3px solid white; }
     </style>
 </head>
 <body>
 
     <div class="profile-container">
         <h1>Who's watching?</h1>
-        
         <div class="profile-list">
             <a href="browse.html" class="profile-card">
-                <div class="profile-img" style="background-image: url('khara.png');"></div>
+                <div class="profile-img" style="background-image: url('khara.jpg');"></div>
                 <div class="profile-name">Khara</div>
             </a>
-
-            <a href="#" class="profile-card">
-                <div class="profile-img" style="background-color: #333; display: flex; align-items: center; justify-content: center;">
-                    <span style="font-size: 30px;">+</span>
-                </div>
-                <div class="profile-name">Add Profile</div>
-            </a>
         </div>
-
-        <button class="manage-button">Manage Profiles</button>
     </div>
 
 </body>

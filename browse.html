@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Browse</title>
+    <style>
+        body {
+            background-color: #141414;
+            color: white;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding-bottom: 50px;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px 4%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        .logo {
+            color: #E50914;
+            font-weight: bold;
+            font-size: 30px;
+            margin-right: 25px;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 75vh;
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0) 60%), 
+                        url('hero-bg.jpg'); /* Replace with your photo */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 4%;
+        }
+        .hero-content h1 { font-size: 4rem; margin-bottom: 10px; }
+        .hero-content p { font-size: 1.2rem; max-width: 500px; margin-bottom: 20px; }
+        
+        .btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-right: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .play-btn { background: white; color: black; }
+        .info-btn { background: rgba(109, 109, 110, 0.7); color: white; }
+
+        /* Row Styling */
+        .row {
+            padding: 20px 0 20px 4%;
+        }
+        .row-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .row-posters {
+            display: flex;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            gap: 15px;
+            padding: 10px 0;
+        }
+        .row-posters::-webkit-scrollbar { display: none; }
+
+        /* Poster Wrapper & Titles */
+        .poster-wrapper {
+            flex: 0 0 auto;
+            width: 250px;
+            transition: transform 0.3s;
+        }
+        .poster-wrapper:hover {
+            transform: scale(1.05);
+            z-index: 2;
+        }
+        .poster {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #333;
+            border-radius: 4px;
+            cursor: pointer;
+            object-fit: cover;
+            display: block;
+        }
+        .poster-title {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #e5e5e5;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="logo">NETFLIX</a>
+        <div class="nav-links">
+            <span>Home</span>
+            <span>TV Shows</span>
+            <span>Movies</span>
+            <span>New & Popular</span>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our Story</h1>
+            <p>The greatest romantic adventure ever told. Starring Khara and her favorite person.</p>
+            <a href="watch.html?v=main_story" class="btn play-btn">▶ Play</a>
+            <button class="btn info-btn">ⓘ More Info</button>
+        </div>
+    </section>
+
+    <div class="row">
+        <div class="row-title">Continue Watching for Khara</div>
+        <div class="row-posters">
+            
+            <div class="poster-wrapper">
+                <a href="watch.html?v=firs.mp4">
+                    <img class="poster" src="firs.png" alt="First Date">
+                </a>
+                <div class="poster-title">Our First Date</div>
+            </div>
+
+            <div class="poster-wrapper">
+                <a href="watch.html?v=road.mp4">
+                    <img class="poster" src="road.png" alt="Road Trip">
+                </a>
+                <div class="poster-title">Road Trips</div>
+            </div>
+
+            <div class="poster-wrapper">
+                <a href="watch.html?v=date.mp4">
+                    <img class="poster" src="aniv.png" alt="Anniversary">
+                </a>
+                <div class="poster-title">foodies</div>
+            </div>
+
+            <div class="poster-wrapper">
+                <a href="watch.html?v=fun.mp4">
+                    <img class="poster" src="fun.png" alt="Funny">
+                </a>
+                <div class="poster-title">Funny Moments</div>
+            </div>
+
+            <div class="poster-wrapper">
+                <a href="watch.html?v=dance.mp4">
+                    <img class="poster" src="dance.png" alt="Dancerist">
+                </a>
+                <div class="poster-title">The Dancerist</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
